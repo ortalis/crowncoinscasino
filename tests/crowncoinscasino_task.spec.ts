@@ -1,7 +1,5 @@
 import { test, expect} from '@playwright/test';
-import { chromium, Browser, Page } from 'playwright';
 import { faker } from '@faker-js/faker';
-import { time } from 'console';
 
 
 test('Crown Coins Casino Profile Update and Balance Check', async ({ page }) => {
