@@ -6,22 +6,22 @@ test('Crown Coins Casino Profile Update and Balance Check', async ({ page }) => 
   // Open the URL
   await page.goto('https://app.dev.crowncoinscasino.com/');
  // Log in to the account
-  await page.click('button:has-text("Log in")'); 
-  await page.fill('input[type="email"]', 'watchdogstest02+11@sunfltd.com');
-  await page.fill('input[type="password"]', '123456');
-  await page.locator("form button.button").click()
+  // await page.click('button:has-text("Log in")'); 
+  // await page.fill('input[type="email"]', 'watchdogstest02+11@sunfltd.com');
+  // await page.fill('input[type="password"]', '123456');
+  // await page.locator("form button.button").click()
   
-  // Check if the dialog box is visible and close it
-  let dialogAppeared = false;
-  page.on('dialog', async (dialog) => {
-    dialogAppeared = true;
-    await dialog.accept();
-  });
+  // // Check if the dialog box is visible and close it
+  // let dialogAppeared = false;
+  // page.on('dialog', async (dialog) => {
+  //   dialogAppeared = true;
+  //   await dialog.accept();
+  // });
 
-  try {
-    await page.locator('#onesignal-slidedown-allow-button').click({ timeout: 5000 });
-  } catch  {
-  }
+  // try {
+  //   await page.locator('#onesignal-slidedown-allow-button').click({ timeout: 5000 });
+  // } catch  {
+  // }
 
   // Update the username with a random string and choose a random avatar
   await page.locator('._menuToggleWrapper_7jhnn_101 button').click()
