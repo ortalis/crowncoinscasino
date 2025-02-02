@@ -23,8 +23,9 @@ test('Crown Coins Casino Profile Update and Balance Check', async ({ page }) => 
   } catch  {
   }
 
-  // Update the username with a random string and choose a random avatar
-  await page.locator('div._top_7jhnn_39 button[data-testid="menuButton"]').click()
+  // Update the username with a random string and choose a random avatar  
+  const header = await page.locator('div._header_7jhnn_27');
+  header.locator('div._top_7jhnn_39 button[data-testid="menuButton"]').click()
   await page.getByRole('button', { name: 'My Account' }).click();
   await page.getByRole('button', { name: 'MY PROFILE' }).click();
   await page.locator('div[class="dialog__body"] [data-testid="editAvatar"]').click();
