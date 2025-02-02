@@ -12,6 +12,8 @@ test('Crown Coins Casino Profile Update and Balance Check', async ({ page }) => 
   await page.fill('input[type="email"]', 'watchdogstest02+11@sunfltd.com');
   await page.fill('input[type="password"]', '123456');
   await page.locator("form button.button").click()
+
+  
   
   // Check if the dialog box is visible and close it
   let dialogAppeared = false;
