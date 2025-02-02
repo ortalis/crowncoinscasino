@@ -24,7 +24,7 @@ test('Crown Coins Casino Profile Update and Balance Check', async ({ page }) => 
   }
 
   // Update the username with a random string and choose a random avatar
-  await page.locator('//button[@class="_hamburger_7jhnn_110"]').click()
+  await page.locator('._menuToggleWrapper_7jhnn_101 button').click()
   await page.getByRole('button', { name: 'My Account' }).click();
   await page.getByRole('button', { name: 'MY PROFILE' }).click();
   await page.locator('div[class="dialog__body"] [data-testid="editAvatar"]').click();
